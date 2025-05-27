@@ -38,13 +38,29 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-list">
+            <div class="project-item has-modal" onclick="openModal('eecs445Modal')">
+                <div class="project-header">
+                    <h3>Dog Classifier</h3>
+                    <span class="location">EECS 445, Apr 2025</span>
+                    <span class="language-tag">Python</span> <!-- Language Tag -->
+                </div>
+                <p>Scalable search engine using tf-idf and PageRank with parallel index processing using MapReduce. <b>read more</b></p>
+            </div>
+            <div class="project-item has-modal" onclick="openModal('ask485Modal')">
+                <div class="project-header">
+                    <h3>Instagram Clone</h3>
+                    <span class="location">EECS 485, Apr 2025</span>
+                    <span class="language-tag">Python</span> <!-- Language Tag -->
+                </div>
+                <p>Image classifier using CNN and ViT architecture in Pytorch. <b>read more</b></p>
+            </div>
             <div class="project-item has-modal" onclick="openModal('insta485Modal')">
                 <div class="project-header">
                     <h3>Instagram Clone</h3>
-                    <span class="location">EECS 485, Jan 2025</span>
-                    <span class="language-tag">Python</span> <!-- Language Tag -->
+                    <span class="location">EECS 485, Feb 2025</span>
+                    <span class="language-tag">HTML/CSS/JS/Python</span> <!-- Language Tag -->
                 </div>
-                <p>Instagram clone with templated static generator using Click and Jinja. <b>read more</b></p>
+                <p>Instagram clone with static page generation, client-side and server-side dynamic pages, and account functionality. <b>read more</b></p>
             </div>
             <div class="project-item">
                 <div class="project-header">
@@ -88,6 +104,32 @@
             </div>
         </div>
 
+        <div id="eecs445Modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('eecs445Modal')">&times;</span>
+                <h2>Dog Classifier</h2>
+                <img src="images/eecs445.png" alt="Training plot of CNN with transfer learning" class="modal-image">
+                <p>
+                    As a part of my EECS445 project, I built a dog breed classifier to distinguish Golden Retrievers from Collies using a dataset of thousands of real-world dog images.
+                    I implemented and compared the performance of convolutional neural networks (CNNs), CNNs with transfer learning, and vision transformers (ViTs) to find the most generalizable approach.
+                    Tested on a heldout challenge set, I achieved over 81% AUROC by using transfer-learning-based CNN architecture with feature engineering and data augmentation.
+                </p>
+            </div>
+        </div>
+        <div id="ask485Modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('ask485Modal')">&times;</span>
+                <h2>ask485</h2>
+                <img src="images/insta485.png" alt="Showcase of ask485 search engine" class="modal-image">
+                <p>
+                    This project was done for my EECS 485: Web Systems class, where I built a scalable search engine similar to Google.
+                    I used Python and Hadoop Streaming to implement a series of MapReduce programs that created a segmented inverted index of web pages, supporting efficient full-text search with tf-idf scoring and PageRank-based link analysis.
+                    I then built an Index server API following RESTful protocol that queries the index and returns ranked search results in JSON format.
+                    Finally, I created a Search server using HTML/CSS/JavaScript to render a responsive frontend that communicates with the backend via REST calls, providing functionality like keyword search, dynamic page rendering, and Google-style result formatting.
+                    The architecture followed a Service-Oriented pattern to ensure scalability and separation of concerns between indexing, querying, and rendering components.
+                </p>
+            </div>
+        </div>
         <div id="insta485Modal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('insta485Modal')">&times;</span>
@@ -96,7 +138,9 @@
                 <p>
                     This project was done for my EECS 485: Web Systems class, where I used HTML/CSS (Bootstrap) to create website templates, 
                     Python (Click for CLI interface and Jinja for template behavior generation) to generate static site pages from JSON files with data, and 
-                    shell scripting to automatically clean up and generate files. In the future, I will work on adding client and server-side dynamic pages for backend support.
+                    shell scripting to automatically clean up and generate files. 
+                    I then added server-side dynamic page generation and account functionality using Flask and SQLite3,
+                    client-side dynamic pages using JavaScript (with functionality like double-click to like and infinite scroll), and a RESTful API for client-side backend.
                 </p>
             </div>
         </div>
