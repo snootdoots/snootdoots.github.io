@@ -8,10 +8,12 @@ function closeModal(modalId) {
 
 // Close modal when clicking outside of it
 window.onclick = function(event) {
-    const modal = document.querySelector('.modal');
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
 }
 
 // Close modal when pressing Escape key
