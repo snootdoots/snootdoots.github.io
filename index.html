@@ -38,6 +38,14 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-list">
+            <div class="project-item has-modal" onclick="openModal('vernovaModal')">
+                <div class="project-header">
+                    <h3>Agentic Contract Parser</h3>
+                    <span class="location">GE Vernova, Jul 2025</span>
+                    <span class="language-tag">Python</span> <!-- Language Tag -->
+                </div>
+                <p>Agentic contract parsing workflow using RAG and LangChain. <b>read more</b></p>
+            </div>
             <div class="project-item has-modal" onclick="openModal('eecs445Modal')">
                 <div class="project-header">
                     <h3>Dog Classifier</h3>
@@ -50,7 +58,7 @@
                 <div class="project-header">
                     <h3>Google Clone</h3>
                     <span class="location">EECS 485, Apr 2025</span>
-                    <span class="language-tag">Python</span> <!-- Language Tag -->
+                    <span class="language-tag">HTML/CSS/JS/Python</span> <!-- Language Tag -->
                 </div>
                 <p>Scalable search engine using tf-idf and PageRank with parallel index processing using MapReduce. <b>read more</b></p>
             </div>
@@ -104,6 +112,17 @@
             </div>
         </div>
 
+        <div id="vernovaModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('vernovaModal')">&times;</span>
+                <h2>Agentic Contract Parser</h2>
+                <p>
+                    As part of my internship at GE Vernova under the Data Science and Automation team, I was tasked with creating an agentic contract processing workflow.
+                    Contracts are typically difficult for LLMs to understand because their amendments require continuous information replacement - e.g., if an amendment is added, the knowledge from the original contract needs to be updated (appended/replaced/updated).
+                    I thus created an agentic contract parsing workflow which leverages LangChain for chunking and structured JSON output, multithreading for concurrency/faster processing times, persistent JSON and ChromaDB storage for clauses and vectorstore, respectively, RegEx for text cleaning, and few-shot prompting for response clarity.
+                </p>
+            </div>
+        </div>
         <div id="eecs445Modal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('eecs445Modal')">&times;</span>
