@@ -1,303 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>davidren ~</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Fira+Code:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJWBVS0CRZ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-CJWBVS0CRZ');
     </script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<nav class="topbar">
-    <div class="topbar-title"><span>david@umich</span>:~$</div>
-    <div class="nav-cmds">
-        <a href="#about" class="nav-cmd">
-            <span class="cmd-prefix">$</span>
-            <span class="cmd-name">cd</span>
-            <span class="cmd-arg">~/about</span>
-        </a>
-        <a href="#projects" class="nav-cmd">
-            <span class="cmd-prefix">$</span>
-            <span class="cmd-name">ls</span>
-            <span class="cmd-arg">~/projects</span>
-        </a>
-        <a href="#classes" class="nav-cmd">
-            <span class="cmd-prefix">$</span>
-            <span class="cmd-name">cat</span>
-            <span class="cmd-arg">classes.txt</span>
-        </a>
-        <a href="#contact" class="nav-cmd">
-            <span class="cmd-prefix">$</span>
-            <span class="cmd-name">curl</span>
-            <span class="cmd-arg">contact.json</span>
-        </a>
-    </div>
-</nav>
-
-<main class="terminal">
-
-    <!-- ABOUT -->
-    <section id="about">
-        <div class="window">
-            <div class="window-chrome">
-                <div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div>
-                <div class="window-title">about.sh — bash</div>
-            </div>
-            <div class="window-body">
-                <div class="prompt-line">
-                    <span class="p-user">david</span><span class="p-at">@</span><span class="p-host">umich</span><span class="p-colon">:</span><span class="p-path">~/about</span><span class="p-dollar">$</span>
-                    <span class="p-cmd">whoami</span>
-                </div>
-                <div class="output">
-                    <div class="about-grid">
-                        <div class="profile-box">
-                            <div class="profile-box-header">portrait.png</div>
-                            <img src="images/portrait.png" class="profile-pic" alt="David Ren">
-                        </div>
-                        <div>
-                            <div class="info-line"><span class="key">name &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p-dollar">=</span><span class="str">"David Ren"</span></div>
-                            <div class="info-line"><span class="key">school &nbsp;&nbsp;</span><span class="p-dollar">=</span><span class="str">"University of Michigan"</span></div>
-                            <div class="info-line"><span class="key">major &nbsp;&nbsp;&nbsp;</span><span class="p-dollar">=</span><span class="str">"Data Science (BSE)"</span></div>
-                            <div class="info-line"><span class="key">grad &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="p-dollar">=</span><span class="str">"Summer 2026"</span></div>
-                            <div class="info-line"><span class="key">interests</span><span class="p-dollar">=</span><span><span class="val">[</span> <span class="str">"AI/ML"</span><span class="val">,</span> <span class="str">"Data Analytics"</span><span class="val">,</span> <span class="str">"Backend Development"</span> <span class="val">]</span></span></div>
-                            <div class="info-line"><span class="key">status  &nbsp;&nbsp;</span><span class="p-dollar">=</span><span class="str">"seeking full-time 2026"</span></div>
-                            <div class="info-line"><span class="key">linkedin&nbsp;</span><span class="p-dollar">=</span><a href="https://www.linkedin.com/in/davidyren/" class="link-val">"linkedin.com/in/davidyren"</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="prompt-line">
-                    <span class="p-user">david</span><span class="p-at">@</span><span class="p-host">umich</span><span class="p-colon">:</span><span class="p-path">~/about</span><span class="p-dollar">$</span>
-                    <span id="flavor-text" style="color: var(--white); margin-left: 6px;"></span><span class="cursor"></span>
-                </div>
-            </div>
+    <nav class="topbar">
+        <div class="topbar-title"><span>david@umich</span>:~$</div>
+        <div class="nav-cmds">
+            <a href="#about" class="nav-cmd">
+                <span class="cmd-prefix">$</span>
+                <span class="cmd-name">cd</span>
+                <span class="cmd-arg">~/about</span>
+            </a>
+            <a href="#projects" class="nav-cmd">
+                <span class="cmd-prefix">$</span>
+                <span class="cmd-name">ls</span>
+                <span class="cmd-arg">~/projects</span>
+            </a>
+            <a href="#classes" class="nav-cmd">
+                <span class="cmd-prefix">$</span>
+                <span class="cmd-name">cat</span>
+                <span class="cmd-arg">classes.txt</span>
+            </a>
+            <a href="#contact" class="nav-cmd">
+                <span class="cmd-prefix">$</span>
+                <span class="cmd-name">curl</span>
+                <span class="cmd-arg">contact.json</span>
+            </a>
         </div>
-    </section>
+    </nav>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-        <div class="window">
-            <div class="window-chrome">
-                <div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div>
-                <div class="window-title">~/projects — bash</div>
-            </div>
-            <div class="window-body">
-                <div class="prompt-line">
-                    <span class="p-user">david</span><span class="p-at">@</span><span class="p-host">umich</span><span class="p-colon">:</span><span class="p-path">~/projects</span><span class="p-dollar">$</span>
-                    <span class="p-cmd">ls</span><span class="p-flag">-la</span>
+    <main class="terminal">
+
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="window">
+                <div class="window-chrome">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-yellow"></div>
+                    <div class="dot dot-green"></div>
+                    <div class="window-title">about.sh — bash</div>
                 </div>
-                <div class="output divider-comment"># click any entry to cat its contents</div>
-                <div class="project-grid">
-
-                    <div class="project-entry">
-                        <div class="proj-cmd-line" onclick="toggleProject('vernova')">
-                            <span class="p-cmd">cat</span>
-                            <span class="proj-file">agentic_contract_parser.md</span>
-                            <span class="proj-date">Jul 2025 · GE Vernova</span>
-                        </div>
-                        <div class="proj-output" id="proj-vernova">
-                            <div class="proj-loc"># GE Vernova — Data Science & Automation</div>
-                            Agentic contract parsing workflow using <span class="tag">RAG</span> and <span class="tag">LangChain</span>. Contracts are notoriously tricky for LLMs due to layered amendments — I built a pipeline with LangChain chunking + structured JSON output, multithreading for concurrency, persistent ChromaDB vectorstore, RegEx cleaning, and few-shot prompting for structured clause extraction.
+                <div class="window-body">
+                    <div class="prompt-line">
+                        <span class="p-user">david</span><span class="p-at">@</span><span
+                            class="p-host">umich</span><span class="p-colon">:</span><span
+                            class="p-path">~/about</span><span class="p-dollar">$</span>
+                        <span class="p-cmd">whoami</span>
+                    </div>
+                    <div class="output">
+                        <div class="about-grid">
+                            <div class="profile-box">
+                                <div class="profile-box-header">portrait.jpg</div>
+                                <img src="images/portrait.jpg" class="profile-pic" alt="David Ren">
+                            </div>
+                            <div>
+                                <div class="info-line"><span class="key">name &nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                                        class="p-dollar">=</span><span class="str">"David Ren"</span></div>
+                                <div class="info-line"><span class="key">school &nbsp;&nbsp;</span><span
+                                        class="p-dollar">=</span><span class="str">"University of Michigan"</span></div>
+                                <div class="info-line"><span class="key">major &nbsp;&nbsp;&nbsp;</span><span
+                                        class="p-dollar">=</span><span class="str">"Data Science (BSE)"</span></div>
+                                <div class="info-line"><span class="key">grad &nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                                        class="p-dollar">=</span><span class="str">"Summer 2026"</span></div>
+                                <div class="info-line"><span class="key">interests</span><span
+                                        class="p-dollar">=</span><span><span class="val">[</span> <span
+                                            class="str">"AI/ML"</span><span class="val">,</span> <span class="str">"Data
+                                            Analytics"</span><span class="val">,</span> <span class="str">"Backend
+                                            Development"</span> <span class="val">]</span></span></div>
+                                <div class="info-line"><span class="key">status &nbsp;&nbsp;</span><span
+                                        class="p-dollar">=</span><span class="str">"seeking full-time 2026"</span></div>
+                                <div class="info-line"><span class="key">linkedin&nbsp;</span><span
+                                        class="p-dollar">=</span><a href="https://www.linkedin.com/in/davidyren/"
+                                        class="link-val">"linkedin.com/in/davidyren"</a></div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="project-entry">
-                        <div class="proj-cmd-line" onclick="toggleProject('eecs445')">
-                            <span class="p-cmd">cat</span>
-                            <span class="proj-file">dog_classifier.md</span>
-                            <span class="proj-date">Apr 2025 · EECS 445</span>
-                        </div>
-                        <div class="proj-output" id="proj-eecs445">
-                            <div class="proj-loc"># EECS 445: Machine Learning</div>
-                            Dog breed classifier distinguishing Golden Retrievers from Collies. Benchmarked <span class="tag">CNN</span>, <span class="tag">CNN + transfer learning</span>, and <span class="tag">ViT</span> architectures in PyTorch. Achieved <b style="color:var(--green)">81%+ AUROC</b> on the held-out challenge set via transfer learning with data augmentation.
-                            <br><img src="images/eecs445.png" class="proj-img" alt="EECS 445 Project">
-                        </div>
-                    </div>
-
-                    <div class="project-entry">
-                        <div class="proj-cmd-line" onclick="toggleProject('ask485')">
-                            <span class="p-cmd">cat</span>
-                            <span class="proj-file">google_clone.md</span>
-                            <span class="proj-date">Apr 2025 · EECS 485</span>
-                        </div>
-                        <div class="proj-output" id="proj-ask485">
-                            <div class="proj-loc"># EECS 485: Web Systems</div>
-                            Scalable search engine (ask485) using <span class="tag">TF-IDF</span> + <span class="tag">PageRank</span>. Built MapReduce programs via Hadoop Streaming for segmented inverted index construction, a RESTful Index Server API, and a full Search Server frontend with Google-style result formatting.
-                            <br><img src="images/ask485.jpg" class="proj-img" alt="ask485 Project">
-                        </div>
-                    </div>
-
-                    <div class="project-entry">
-                        <div class="proj-cmd-line" onclick="toggleProject('insta485')">
-                            <span class="p-cmd">cat</span>
-                            <span class="proj-file">instagram_clone.md</span>
-                            <span class="proj-date">Feb 2025 · EECS 485</span>
-                        </div>
-                        <div class="proj-output" id="proj-insta485">
-                            <div class="proj-loc"># EECS 485: Web Systems</div>
-                            Instagram clone (insta485) with static site generation via Jinja/Click, server-side dynamic pages with <span class="tag">Flask</span> + <span class="tag">SQLite3</span>, client-side JS (double-click like, infinite scroll), and a full RESTful API backend.
-                            <br><img src="images/insta485.png" class="proj-img" alt="insta485 Project">
-                        </div>
-                    </div>
-
-                    <div class="project-entry">
-                        <div class="proj-cmd-line" onclick="toggleProject('banking')">
-                            <span class="p-cmd">cat</span>
-                            <span class="proj-file">banking_simulator.md</span>
-                            <span class="proj-date">Nov 2024 · EECS 281</span>
-                        </div>
-                        <div class="proj-output" id="proj-banking">
-                            <div class="proj-loc"># EECS 281: Data Structures & Algorithms</div>
-                            Real-time banking simulation in C++ supporting wire transactions, transfers, and fraud detection. Optimized with priority queues and hash maps for O(log n) transaction routing.
-                        </div>
-                    </div>
-
-                    <div class="project-entry">
-                        <div class="proj-cmd-line" onclick="toggleProject('astri')">
-                            <span class="p-cmd">cat</span>
-                            <span class="proj-file">yolo_model_analysis.md</span>
-                            <span class="proj-date">Aug 2024 · ASTRI</span>
-                        </div>
-                        <div class="proj-output" id="proj-astri">
-                            <div class="proj-loc"># ASTRI — in collaboration with MTR Corporation</div>
-                            <span class="tag">YOLOv8</span> model for detecting exit stairs from train cameras. Built a custom evaluation pipeline computing Intersection over Union (IoU) metrics in <span class="tag">PyTorch</span>. Delivered for production deployment with MTR Corporation.
-                            <br><img src="images/astri.png" class="proj-img" alt="ASTRI Project">
-                        </div>
-                    </div>
-
-                    <div class="project-entry">
-                        <div class="proj-cmd-line" onclick="toggleProject('autowater')">
-                            <span class="p-cmd">cat</span>
-                            <span class="proj-file">autowater.md</span>
-                            <span class="proj-date">Apr 2024 · ENGR 100</span>
-                        </div>
-                        <div class="proj-output" id="proj-autowater">
-                            <div class="proj-loc"># ENGR 100: Engineering 100</div>
-                            Solar-powered automatic plant waterer built with <span class="tag">Arduino</span> + TinkerCAD. Moisture sensors trigger watering, weight sensors detect low tank levels, and Bluetooth pushes user notifications — zero human intervention required.
-                            <br><img src="images/autowater.jpg" class="proj-img" alt="AutoWater Project">
-                        </div>
-                    </div>
-
-                    <div class="project-entry">
-                        <div class="proj-cmd-line" onclick="toggleProject('piazza')">
-                            <span class="p-cmd">cat</span>
-                            <span class="proj-file">piazza_classifier.md</span>
-                            <span class="proj-date">Mar 2024 · EECS 280</span>
-                        </div>
-                        <div class="proj-output" id="proj-piazza">
-                            <div class="proj-loc"># EECS 280: Programming & Intro Data Structures</div>
-                            <span class="tag">Naive Bayes</span> text classifier in C++ predicting topic labels of Piazza posts. Implemented from scratch: bag-of-words featurization, log-probability scoring, and multi-class prediction.
-                        </div>
-                    </div>
-
-                    <div class="project-entry">
-                        <div class="proj-cmd-line" onclick="toggleProject('tiktok')">
-                            <span class="p-cmd">cat</span>
-                            <span class="proj-file">tiktok_reddit_generator.md</span>
-                            <span class="proj-date">Apr 2024 · MDST</span>
-                        </div>
-                        <div class="proj-output" id="proj-tiktok">
-                            <div class="proj-loc"># Michigan Data Science Team</div>
-                            Automated short-form video pipeline: scrapes Reddit via <span class="tag">BeautifulSoup</span>, synthesizes voiceover with <span class="tag">gTTS</span>, and renders TikTok-style "brainrot" videos in Python — fully end-to-end.
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CLASSES -->
-    <section id="classes">
-        <div class="window">
-            <div class="window-chrome">
-                <div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div>
-                <div class="window-title">classes.txt — less</div>
-            </div>
-            <div class="window-body">
-                <div class="prompt-line">
-                    <span class="p-user">david</span><span class="p-at">@</span><span class="p-host">umich</span><span class="p-colon">:</span><span class="p-path">~</span><span class="p-dollar">$</span>
-                    <span class="p-cmd">cat</span><span class="p-arg">classes.txt</span>
-                </div>
-                <div class="output">
-                    <div class="class-grid">
-                        <div class="class-item"><span class="class-code">EECS 445</span><span class="class-name">Machine Learning</span></div>
-                        <div class="class-item"><span class="class-code">EECS 484</span><span class="class-name">Database Systems</span></div>
-                        <div class="class-item"><span class="class-code">EECS 485</span><span class="class-name">Web Systems</span></div>
-                        <div class="class-item"><span class="class-code">EECS 486</span><span class="class-name">Information Retrieval</span></div>
-                        <div class="class-item"><span class="class-code">EECS 370</span><span class="class-name">Computer Organization</span></div>
-                        <div class="class-item"><span class="class-code">EECS 388</span><span class="class-name">Cybersecurity</span></div>
-                        <div class="class-item"><span class="class-code">EECS 281</span><span class="class-name">Data Structures & Algorithms</span></div>
-                        <div class="class-item"><span class="class-code">EECS 280</span><span class="class-name">Object-Oriented Programming</span></div>
-                        <div class="class-item"><span class="class-code">STATS 413</span><span class="class-name">Regression Analysis</span></div>
-                        <div class="class-item"><span class="class-code">MATH 425</span><span class="class-name">Intro to Probability</span></div>
-                        <div class="class-item"><span class="class-code">EECS 203</span><span class="class-name">Discrete Math</span></div>
-                        <div class="class-item"><span class="class-code">MATH 214</span><span class="class-name">Linear Algebra</span></div>
-                        <div class="class-item"><span class="class-code">MATH 215</span><span class="class-name">Multivariable Calculus</span></div>
-                        <div class="class-item"><span class="class-code">LING 441</span><span class="class-name">Computational Linguistics</span></div>
-                        <div class="class-item"><span class="class-code">PHIL 340</span><span class="class-name">Morals of AI</span></div>
-                        <div class="class-item"><span class="class-code">SOC 260</span><span class="class-name">Social Dynamics</span></div>
-                        <div class="class-item"><span class="class-code">EEB 325</span><span class="class-name">Complex Systems</span></div>
+                    <div class="prompt-line">
+                        <span class="p-user">david</span><span class="p-at">@</span><span
+                            class="p-host">umich</span><span class="p-colon">:</span><span
+                            class="p-path">~/about</span><span class="p-dollar">$</span>
+                        <span id="flavor-text" style="color: var(--white); margin-left: 6px;"></span><span
+                            class="cursor"></span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
-        <div class="window">
-            <div class="window-chrome">
-                <div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div>
-                <div class="window-title">contact.json — bash</div>
-            </div>
-            <div class="window-body">
-                <div class="prompt-line">
-                    <span class="p-user">david</span><span class="p-at">@</span><span class="p-host">umich</span><span class="p-colon">:</span><span class="p-path">~</span><span class="p-dollar">$</span>
-                    <span class="p-cmd">curl</span><span class="p-flag">-s</span><span class="p-arg">contact.json</span>
+        <!-- PROJECTS -->
+        <section id="projects">
+            <div class="window">
+                <div class="window-chrome">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-yellow"></div>
+                    <div class="dot dot-green"></div>
+                    <div class="window-title">~/projects — bash</div>
                 </div>
-                <div class="output">
-                    <div class="contact-grid">
-                        <a href="https://www.linkedin.com/in/davidyren" target="_blank" class="contact-line">
-                            <i class="fab fa-linkedin icon"></i>
-                            <span class="c-cmd">open</span>
-                            <span class="c-url">linkedin.com/in/davidyren</span>
-                            <span class="c-comment"># connect</span>
-                        </a>
-                        <a href="https://github.com/snootdoots" target="_blank" class="contact-line">
-                            <i class="fab fa-github icon"></i>
-                            <span class="c-cmd">open</span>
-                            <span class="c-url">github.com/snootdoots</span>
-                            <span class="c-comment"># source</span>
-                        </a>
-                        <a href="mailto:davidren12345@gmail.com" class="contact-line">
-                            <i class="fas fa-envelope icon"></i>
-                            <span class="c-cmd">mailto</span>
-                            <span class="c-url">davidren12345@gmail.com</span>
-                            <span class="c-comment"># fastest reply</span>
-                        </a>
+                <div class="window-body">
+                    <div class="prompt-line">
+                        <span class="p-user">david</span><span class="p-at">@</span><span
+                            class="p-host">umich</span><span class="p-colon">:</span><span
+                            class="p-path">~/projects</span><span class="p-dollar">$</span>
+                        <span class="p-cmd">ls</span><span class="p-flag">-la</span>
+                    </div>
+                    <div class="output divider-comment"># click any entry to cat its contents</div>
+                    <div class="project-grid">
+
+                        <div class="project-entry">
+                            <div class="proj-cmd-line" onclick="toggleProject('vernova')">
+                                <span class="p-cmd">cat</span>
+                                <span class="proj-file">agentic_contract_parser.md</span>
+                                <span class="proj-date">Jul 2025 · GE Vernova</span>
+                            </div>
+                            <div class="proj-output" id="proj-vernova">
+                                <div class="proj-loc"># GE Vernova — Data Science & Automation</div>
+                                Agentic contract parsing workflow using <span class="tag">RAG</span> and <span
+                                    class="tag">LangChain</span>. Contracts are notoriously tricky for LLMs due to
+                                layered amendments — I built a pipeline with LangChain chunking + structured JSON
+                                output, multithreading for concurrency, persistent ChromaDB vectorstore, RegEx cleaning,
+                                and few-shot prompting for structured clause extraction.
+                            </div>
+                        </div>
+
+                        <div class="project-entry">
+                            <div class="proj-cmd-line" onclick="toggleProject('eecs445')">
+                                <span class="p-cmd">cat</span>
+                                <span class="proj-file">dog_classifier.md</span>
+                                <span class="proj-date">Apr 2025 · EECS 445</span>
+                            </div>
+                            <div class="proj-output" id="proj-eecs445">
+                                <div class="proj-loc"># EECS 445: Machine Learning</div>
+                                Dog breed classifier distinguishing Golden Retrievers from Collies. Benchmarked <span
+                                    class="tag">CNN</span>, <span class="tag">CNN + transfer learning</span>, and <span
+                                    class="tag">ViT</span> architectures in PyTorch. Achieved <b
+                                    style="color:var(--green)">81%+ AUROC</b> on the held-out challenge set via transfer
+                                learning with data augmentation.
+                                <br><img src="images/eecs445.png" class="proj-img" alt="EECS 445 Project">
+                            </div>
+                        </div>
+
+                        <div class="project-entry">
+                            <div class="proj-cmd-line" onclick="toggleProject('ask485')">
+                                <span class="p-cmd">cat</span>
+                                <span class="proj-file">google_clone.md</span>
+                                <span class="proj-date">Apr 2025 · EECS 485</span>
+                            </div>
+                            <div class="proj-output" id="proj-ask485">
+                                <div class="proj-loc"># EECS 485: Web Systems</div>
+                                Scalable search engine (ask485) using <span class="tag">TF-IDF</span> + <span
+                                    class="tag">PageRank</span>. Built MapReduce programs via Hadoop Streaming for
+                                segmented inverted index construction, a RESTful Index Server API, and a full Search
+                                Server frontend with Google-style result formatting.
+                                <br><img src="images/ask485.jpg" class="proj-img" alt="ask485 Project">
+                            </div>
+                        </div>
+
+                        <div class="project-entry">
+                            <div class="proj-cmd-line" onclick="toggleProject('insta485')">
+                                <span class="p-cmd">cat</span>
+                                <span class="proj-file">instagram_clone.md</span>
+                                <span class="proj-date">Feb 2025 · EECS 485</span>
+                            </div>
+                            <div class="proj-output" id="proj-insta485">
+                                <div class="proj-loc"># EECS 485: Web Systems</div>
+                                Instagram clone (insta485) with static site generation via Jinja/Click, server-side
+                                dynamic pages with <span class="tag">Flask</span> + <span class="tag">SQLite3</span>,
+                                client-side JS (double-click like, infinite scroll), and a full RESTful API backend.
+                                <br><img src="images/insta485.png" class="proj-img" alt="insta485 Project">
+                            </div>
+                        </div>
+
+                        <div class="project-entry">
+                            <div class="proj-cmd-line" onclick="toggleProject('banking')">
+                                <span class="p-cmd">cat</span>
+                                <span class="proj-file">banking_simulator.md</span>
+                                <span class="proj-date">Nov 2024 · EECS 281</span>
+                            </div>
+                            <div class="proj-output" id="proj-banking">
+                                <div class="proj-loc"># EECS 281: Data Structures & Algorithms</div>
+                                Real-time banking simulation in C++ supporting wire transactions, transfers, and fraud
+                                detection. Optimized with priority queues and hash maps for O(log n) transaction
+                                routing.
+                            </div>
+                        </div>
+
+                        <div class="project-entry">
+                            <div class="proj-cmd-line" onclick="toggleProject('astri')">
+                                <span class="p-cmd">cat</span>
+                                <span class="proj-file">yolo_model_analysis.md</span>
+                                <span class="proj-date">Aug 2024 · ASTRI</span>
+                            </div>
+                            <div class="proj-output" id="proj-astri">
+                                <div class="proj-loc"># ASTRI — in collaboration with MTR Corporation</div>
+                                <span class="tag">YOLOv8</span> model for detecting exit stairs from train cameras.
+                                Built a custom evaluation pipeline computing Intersection over Union (IoU) metrics in
+                                <span class="tag">PyTorch</span>. Delivered for production deployment with MTR
+                                Corporation.
+                                <br><img src="images/astri.png" class="proj-img" alt="ASTRI Project">
+                            </div>
+                        </div>
+
+                        <div class="project-entry">
+                            <div class="proj-cmd-line" onclick="toggleProject('autowater')">
+                                <span class="p-cmd">cat</span>
+                                <span class="proj-file">autowater.md</span>
+                                <span class="proj-date">Apr 2024 · ENGR 100</span>
+                            </div>
+                            <div class="proj-output" id="proj-autowater">
+                                <div class="proj-loc"># ENGR 100: Engineering 100</div>
+                                Solar-powered automatic plant waterer built with <span class="tag">Arduino</span> +
+                                TinkerCAD. Moisture sensors trigger watering, weight sensors detect low tank levels, and
+                                Bluetooth pushes user notifications — zero human intervention required.
+                                <br><img src="images/autowater.jpg" class="proj-img" alt="AutoWater Project">
+                            </div>
+                        </div>
+
+                        <div class="project-entry">
+                            <div class="proj-cmd-line" onclick="toggleProject('piazza')">
+                                <span class="p-cmd">cat</span>
+                                <span class="proj-file">piazza_classifier.md</span>
+                                <span class="proj-date">Mar 2024 · EECS 280</span>
+                            </div>
+                            <div class="proj-output" id="proj-piazza">
+                                <div class="proj-loc"># EECS 280: Programming & Intro Data Structures</div>
+                                <span class="tag">Naive Bayes</span> text classifier in C++ predicting topic labels of
+                                Piazza posts. Implemented from scratch: bag-of-words featurization, log-probability
+                                scoring, and multi-class prediction.
+                            </div>
+                        </div>
+
+                        <div class="project-entry">
+                            <div class="proj-cmd-line" onclick="toggleProject('tiktok')">
+                                <span class="p-cmd">cat</span>
+                                <span class="proj-file">tiktok_reddit_generator.md</span>
+                                <span class="proj-date">Apr 2024 · MDST</span>
+                            </div>
+                            <div class="proj-output" id="proj-tiktok">
+                                <div class="proj-loc"># Michigan Data Science Team</div>
+                                Automated short-form video pipeline: scrapes Reddit via <span
+                                    class="tag">BeautifulSoup</span>, synthesizes voiceover with <span
+                                    class="tag">gTTS</span>, and renders TikTok-style "brainrot" videos in Python —
+                                fully end-to-end.
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-</main>
+        <!-- CLASSES -->
+        <section id="classes">
+            <div class="window">
+                <div class="window-chrome">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-yellow"></div>
+                    <div class="dot dot-green"></div>
+                    <div class="window-title">classes.txt — less</div>
+                </div>
+                <div class="window-body">
+                    <div class="prompt-line">
+                        <span class="p-user">david</span><span class="p-at">@</span><span
+                            class="p-host">umich</span><span class="p-colon">:</span><span class="p-path">~</span><span
+                            class="p-dollar">$</span>
+                        <span class="p-cmd">cat</span><span class="p-arg">classes.txt</span>
+                    </div>
+                    <div class="output">
+                        <div class="class-grid">
+                            <div class="class-item"><span class="class-code">EECS 445</span><span
+                                    class="class-name">Machine Learning</span></div>
+                            <div class="class-item"><span class="class-code">EECS 484</span><span
+                                    class="class-name">Database Systems</span></div>
+                            <div class="class-item"><span class="class-code">EECS 485</span><span class="class-name">Web
+                                    Systems</span></div>
+                            <div class="class-item"><span class="class-code">EECS 486</span><span
+                                    class="class-name">Information Retrieval</span></div>
+                            <div class="class-item"><span class="class-code">EECS 370</span><span
+                                    class="class-name">Computer Organization</span></div>
+                            <div class="class-item"><span class="class-code">EECS 388</span><span
+                                    class="class-name">Cybersecurity</span></div>
+                            <div class="class-item"><span class="class-code">EECS 281</span><span
+                                    class="class-name">Data Structures & Algorithms</span></div>
+                            <div class="class-item"><span class="class-code">EECS 280</span><span
+                                    class="class-name">Object-Oriented Programming</span></div>
+                            <div class="class-item"><span class="class-code">STATS 413</span><span
+                                    class="class-name">Regression Analysis</span></div>
+                            <div class="class-item"><span class="class-code">MATH 425</span><span
+                                    class="class-name">Intro to Probability</span></div>
+                            <div class="class-item"><span class="class-code">EECS 203</span><span
+                                    class="class-name">Discrete Math</span></div>
+                            <div class="class-item"><span class="class-code">MATH 214</span><span
+                                    class="class-name">Linear Algebra</span></div>
+                            <div class="class-item"><span class="class-code">MATH 215</span><span
+                                    class="class-name">Multivariable Calculus</span></div>
+                            <div class="class-item"><span class="class-code">LING 441</span><span
+                                    class="class-name">Computational Linguistics</span></div>
+                            <div class="class-item"><span class="class-code">PHIL 340</span><span
+                                    class="class-name">Morals of AI</span></div>
+                            <div class="class-item"><span class="class-code">SOC 260</span><span
+                                    class="class-name">Social Dynamics</span></div>
+                            <div class="class-item"><span class="class-code">EEB 325</span><span
+                                    class="class-name">Complex Systems</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<footer>
-    <a href="#about">↑ cd ~</a> &nbsp;·&nbsp; built by david ren &nbsp;·&nbsp; <span style="color:var(--green-dim)">exit 0</span>
-</footer>
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="window">
+                <div class="window-chrome">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-yellow"></div>
+                    <div class="dot dot-green"></div>
+                    <div class="window-title">contact.json — bash</div>
+                </div>
+                <div class="window-body">
+                    <div class="prompt-line">
+                        <span class="p-user">david</span><span class="p-at">@</span><span
+                            class="p-host">umich</span><span class="p-colon">:</span><span class="p-path">~</span><span
+                            class="p-dollar">$</span>
+                        <span class="p-cmd">curl</span><span class="p-flag">-s</span><span
+                            class="p-arg">contact.json</span>
+                    </div>
+                    <div class="output">
+                        <div class="contact-grid">
+                            <a href="https://www.linkedin.com/in/davidyren" target="_blank" class="contact-line">
+                                <i class="fab fa-linkedin icon"></i>
+                                <span class="c-cmd">open</span>
+                                <span class="c-url">linkedin.com/in/davidyren</span>
+                                <span class="c-comment"># connect</span>
+                            </a>
+                            <a href="https://github.com/snootdoots" target="_blank" class="contact-line">
+                                <i class="fab fa-github icon"></i>
+                                <span class="c-cmd">open</span>
+                                <span class="c-url">github.com/snootdoots</span>
+                                <span class="c-comment"># source</span>
+                            </a>
+                            <a href="mailto:davidren12345@gmail.com" class="contact-line">
+                                <i class="fas fa-envelope icon"></i>
+                                <span class="c-cmd">mailto</span>
+                                <span class="c-url">davidren12345@gmail.com</span>
+                                <span class="c-comment"># fastest reply</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<script src="script.js"></script>
+    </main>
+
+    <footer>
+        <a href="#about">↑ cd ~</a> &nbsp;·&nbsp; built by david ren &nbsp;·&nbsp; <span
+            style="color:var(--green-dim)">exit 0</span>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
